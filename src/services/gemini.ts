@@ -20,7 +20,7 @@ export interface StreamChunk {
 
 export async function* streamGeminiResponse(
   messages: Message[],
-  modelName: string = 'gemini-1.5-flash'
+  modelName: string = 'gemini-1.5-flash-latest'
 ): AsyncGenerator<StreamChunk> {
   if (!genAI) {
     throw new Error('Gemini API not configured. Please add your API key to .env file');
